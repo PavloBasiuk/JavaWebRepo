@@ -11,6 +11,7 @@ public class FirstTest {
 
         WebDriver driver = new FirefoxDriver();
 
+        //check how git will process potential conflict
         driver.navigate().to("http://btgkdev.cloudapp.net/");
         Assert.assertEquals("Title starts with 'GULLKYSTEN'", true, driver.getTitle().startsWith("GULLKYSTEN"));
         //Assert.assertEquals("Checking the title of home page", "GULLKYSTEN", driver.getTitle());
