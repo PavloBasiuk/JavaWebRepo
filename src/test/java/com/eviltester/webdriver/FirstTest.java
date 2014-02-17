@@ -1,6 +1,6 @@
 package com.eviltester.webdriver;
 
-import junit.framework.Assert;
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -12,7 +12,9 @@ public class FirstTest {
         WebDriver driver = new FirefoxDriver();
 
         driver.navigate().to("http://btgkdev.cloudapp.net/");
-        //Assert.assertTrue("Title should be", "GULLKYSTEN"==driver.getTitle() );
-        Assert.assertEquals("Checking the title of home page", "GULLKYSTEN", driver.getTitle());
+        Assert.assertEquals("Title starts with 'GULLKYSTEN'", true, driver.getTitle().startsWith("GULLKYSTEN"));
+        //Assert.assertEquals("Checking the title of home page", "GULLKYSTEN", driver.getTitle());
+        driver.close();
+        driver.quit();
     }
 }
