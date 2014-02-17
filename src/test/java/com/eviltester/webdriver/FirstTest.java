@@ -16,5 +16,6 @@ public class FirstTest {
         //Assert.assertEquals("Checking the title of home page", "GULLKYSTEN", driver.getTitle());
         driver.close();
         driver.quit();
+        // yet another minor comment done from browser at github
     }
 }
